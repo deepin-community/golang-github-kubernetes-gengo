@@ -1,5 +1,53 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-kubernetes-gengo (0.0~git20230829.9cce18d-2) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * Install examples, golang-k8s-kube-openapi uses them
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jérémy Lal <kapouer@melix.org>  Tue, 26 Dec 2023 13:54:49 +0100
+
+golang-github-kubernetes-gengo (0.0~git20230829.9cce18d-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.0~git20230829.9cce18d
+  * copyright: remove paragraph and useless license
+  * Standards-Version: 4.6.2
+  * patch: fix test
+  * rules: simplify install, enable tests
+  * install: let dh_golang install automatically
+  * section: golang
+  * maintainer: update go-team email address
+  * rules-require-root: no
+  * testsuite: autopkgtest-pkg-go
+  * b-d, d: golang-any
+  * multi-arch: foreign
+
+ -- Jérémy Lal <kapouer@melix.org>  Tue, 26 Dec 2023 13:16:55 +0100
+
+golang-github-kubernetes-gengo (0.0~git20210915.39e73c8-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Andrej Shadura ]
+  * New upstream snapshot.
+  * Update dependencies.
+  * Make the description start with a lowercase letter.
+  * Ignore test failures.
+  * Drop no longer necessary patch.
+  * Set upstream metadata fields: Security-Contact.
+  * Bump Standards-Version to 4.6.0.
+  * Update Vcs-*.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Fri, 15 Oct 2021 19:20:41 +0200
+
+golang-github-kubernetes-gengo (0.0~git20170531.0.c79c13d-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Mon, 25 Sep 2017 12:27:09 +0200
+
+golang-github-kubernetes-gengo (0.0~git20161024.0.6a1c24d-1) unstable; urgency=medium
+
+  * Initial release (Closes: #858311)
+
+ -- Tim Potter <tpot@hpe.com>  Tue, 21 Feb 2017 08:56:15 +1100
