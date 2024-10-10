@@ -1,0 +1,28 @@
+Description: module resolution seems to change when using dh_golang
+ Not sure about that, though.
+Author: Jérémy Lal <kapouer@melix.org>
+Forwarded: not-needed
+--- a/parser/local_parse_test.go
++++ b/parser/local_parse_test.go
+@@ -34,10 +34,10 @@
+ 	os.Chdir("../testdata/dependent")
+ 
+ 	b := New()
+-	if _, err := b.importBuildPackage("fake/dep"); err != nil {
++	if _, err := b.importBuildPackage("../fake/dep"); err != nil {
+ 		t.Fatal(err)
+ 	}
+-	if _, ok := b.buildPackages["fake/dep"]; !ok {
++	if _, ok := b.buildPackages["../fake/dep"]; !ok {
+ 		t.Errorf("missing expected, but got %v", b.buildPackages)
+ 	}
+ 
+@@ -50,7 +50,7 @@
+ 
+ func TestIsErrPackageNotFound(t *testing.T) {
+ 	b := New()
+-	if _, err := b.importBuildPackage("fake/empty"); !isErrPackageNotFound(err) {
++	if _, err := b.importBuildPackage("../fake/empty"); !isErrPackageNotFound(err) {
+ 		t.Errorf("expected error like %s, but got %v", regexErrPackageNotFound.String(), err)
+ 	}
+ }

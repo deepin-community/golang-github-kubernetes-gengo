@@ -1,4 +1,15 @@
 #!/usr/bin/make -f
 
+export DH_GOLANG_INSTALL_EXTRA := testdata examples
+
 %:
-	dh $@
+	dh $@ --buildsystem=golang
+
+execute_after_dh_install:
+	find debian/ -name .gitignore -delete
+
+execute_after_dh_installexamples:
+	find debian/ -name .gitignore -delete
+
+override_dh_auto_install:
+	dh_auto_install -- --no-binaries

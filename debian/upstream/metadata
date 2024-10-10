@@ -1,0 +1,5 @@
+Bug-Database: https://github.com/kubernetes/gengo/issues
+Bug-Submit: https://github.com/kubernetes/gengo/issues/new
+Repository: https://github.com/kubernetes/gengo.git
+Repository-Browse: https://github.com/kubernetes/gengo
+Security-Contact: https://github.com/kubernetes/gengo/tree/HEAD/SECURITY.md
